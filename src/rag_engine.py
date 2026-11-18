@@ -114,3 +114,4 @@ Please provide a detailed, helpful, and beautifully formatted response based on 
 
         messages.append({"role": "user", "content": user_content})
         return messages
+

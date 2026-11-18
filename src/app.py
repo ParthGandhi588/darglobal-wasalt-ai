@@ -1,7 +1,11 @@
 import os
 import sys
 import time
+from dotenv import load_dotenv
 import streamlit as st
+
+# Load environment variables
+load_dotenv()
 
 # Add project root to sys.path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -287,3 +291,4 @@ if user_query:
         "content": full_response,
         "retrieved_docs": retrieved_docs
     })
+
