@@ -21,34 +21,33 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Luxury CSS Styling
+# Adaptive Luxury CSS Styling (Supports both Light and Dark mode seamlessly)
 st.markdown("""
 <style>
-    /* Dark luxury theme adjustments */
-    .stApp {
-        background-color: #0d1117;
-        color: #e6edf3;
-    }
-    
-    /* Luxury headers */
+    /* Luxury Typography */
     h1, h2, h3 {
-        color: #e2c082 !important;
         font-family: 'Playfair Display', Georgia, serif;
+        letter-spacing: -0.01em;
     }
     
-    /* Metric / Stat badges */
+    /* Default / Light Mode Styling */
+    h1, h2, h3 {
+        color: #946c15 !important;
+    }
+    
     .badge-darglobal {
-        background: linear-gradient(135deg, #1f242d 0%, #2a3240 100%);
-        border: 1px solid #c5a059;
+        background-color: var(--secondary-background-color, #f8f9fa);
+        border: 1px solid #b8860b;
         border-radius: 8px;
-        padding: 10px 14px;
-        margin-bottom: 8px;
-        color: #f0f6fc;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        color: var(--text-color, #1e293b);
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
     
     .badge-gold {
-        color: #d4af37;
-        font-weight: 600;
+        color: #946c15;
+        font-weight: 700;
     }
     
     /* Chat message styling */
@@ -58,34 +57,46 @@ st.markdown("""
         margin-bottom: 10px;
     }
     
-    /* Project highlight card */
+    /* Property Highlight Card */
     .property-card {
-        background: #161b22;
-        border: 1px solid #30363d;
+        background-color: var(--secondary-background-color, #ffffff);
+        border: 1px solid rgba(184, 134, 11, 0.35);
         border-radius: 10px;
-        padding: 14px;
+        padding: 16px;
         margin-top: 10px;
         margin-bottom: 12px;
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
     
     .property-card:hover {
-        border-color: #c5a059;
+        border-color: #b8860b;
         transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(184, 134, 11, 0.15);
     }
     
     .property-card h4 {
-        margin: 0 0 6px 0;
-        color: #e2c082;
+        margin: 0 0 8px 0;
+        color: #946c15 !important;
+        font-weight: 700;
+    }
+    
+    .property-card p {
+        color: var(--text-color, #334155) !important;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
     
     .property-tag {
         display: inline-block;
-        background: #21262d;
-        color: #c5a059;
-        border: 1px solid #c5a059;
+        background-color: rgba(184, 134, 11, 0.12);
+        color: #8a6508 !important;
+        border: 1px solid rgba(184, 134, 11, 0.4);
         font-size: 0.75rem;
-        padding: 2px 8px;
+        font-weight: 600;
+        padding: 3px 8px;
         border-radius: 4px;
         margin-right: 6px;
         margin-bottom: 6px;
@@ -94,16 +105,67 @@ st.markdown("""
     .link-btn {
         display: inline-block;
         color: #ffffff !important;
-        background: #c5a059;
+        background: #b8860b;
         text-decoration: none !important;
-        padding: 5px 12px;
-        border-radius: 4px;
+        padding: 6px 14px;
+        border-radius: 6px;
         font-size: 0.82rem;
         font-weight: 600;
-        margin-top: 6px;
+        margin-top: 8px;
+        transition: background 0.2s ease;
     }
     .link-btn:hover {
-        background: #d4af37;
+        background: #946c15;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+        h1, h2, h3 {
+            color: #e2c082 !important;
+        }
+        
+        .badge-darglobal {
+            background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+            border: 1px solid #c5a059;
+            color: #f0f6fc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        }
+        
+        .badge-gold {
+            color: #d4af37;
+        }
+        
+        .property-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .property-card:hover {
+            border-color: #c5a059;
+        }
+        
+        .property-card h4 {
+            color: #e2c082 !important;
+        }
+        
+        .property-card p {
+            color: #c9d1d9 !important;
+        }
+        
+        .property-tag {
+            background-color: #21262d;
+            color: #e2c082 !important;
+            border: 1px solid #c5a059;
+        }
+        
+        .link-btn {
+            background: #c5a059;
+            color: #0d1117 !important;
+        }
+        .link-btn:hover {
+            background: #d4af37;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
