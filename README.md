@@ -14,6 +14,10 @@ pinned: false
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-Free%20Tier-6366F1)](https://openrouter.ai/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Working%20URL-22c55e?style=for-the-badge&logo=cloudflare)](https://native-collaborative-cocktail-occur.trycloudflare.com)
+
+> 🌐 **Live Public Working URL**: [https://native-collaborative-cocktail-occur.trycloudflare.com](https://native-collaborative-cocktail-occur.trycloudflare.com)  
+> 📦 **GitHub Repository**: [https://github.com/ParthGandhi588/darglobal-wasalt-ai](https://github.com/ParthGandhi588/darglobal-wasalt-ai)
 
 An intelligent, full-stack AI Real Estate Advisory Chatbot developed for the **Junior AI Engineer – Applied AI** recruitment technical assessment for **DarGlobal**.
 
