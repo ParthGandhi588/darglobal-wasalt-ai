@@ -1,0 +1,12 @@
+services:
+  darglobal-assistant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: darglobal-wasalt-assistant
+    ports:
+      - "8501:7860"
+    environment:
+      - PORT=7860
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+    restart: unless-stopped
