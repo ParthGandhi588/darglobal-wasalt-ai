@@ -13,6 +13,7 @@ pinned: false
 [![Docker Image](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=ParthGandhi588/darglobal-wasalt-ai&branch=main&mainModule=src/app.py)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-Free%20Tier-6366F1)](https://openrouter.ai/)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Working%20URL-22c55e?style=for-the-badge&logo=cloudflare)](https://native-collaborative-cocktail-occur.trycloudflare.com)
 
